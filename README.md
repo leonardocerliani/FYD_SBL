@@ -170,7 +170,7 @@ Note that when the json file has been generated, you will still have to place it
 
 
 ## Registering the subjct-IDs on FYD
-This is something that can be done programmatically using `datajoint`. An example is in `02_register_subj_on_FYD.ipytnb`. Other information (the classes for other tables) can be found on the [github of the FYD Python client](https://github.com/Herseninstituut/FYD_Python/blob/main/DJ/examplelab.ipynb). 
+This is something that can be done programmatically using `datajoint`. An example is in `02_register_subj_on_FYD.ipynb`. Other information (the classes for other tables) can be found on the [github of the FYD Python client](https://github.com/Herseninstituut/FYD_Python/blob/main/DJ/examplelab.ipynb). 
 
 NB: in the notebook there are also examples showing how to _remove_ subjects. Check the last cells.
 
