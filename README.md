@@ -170,26 +170,9 @@ Note that when the json file has been generated, you will still have to place it
 
 
 ## Registering the subjct-IDs on FYD
-This is something that can be done programmatically using `datajoint`. An example - provided by Chris vdT - is in the `InsertSubject_Chrisvdt.ipynb`. Other information (the classes for other tables) can be found on the [github of the FYD Python client](https://github.com/Herseninstituut/FYD_Python/blob/main/DJ/examplelab.ipynb). I also placed here the same notebook `examplelab.ipynb` for simplicity
+This is something that can be done programmatically using `datajoint`. An example is in `02_register_subj_on_FYD.ipytnb`. Other information (the classes for other tables) can be found on the [github of the FYD Python client](https://github.com/Herseninstituut/FYD_Python/blob/main/DJ/examplelab.ipynb). 
 
-Important things to note from the procedure of registering new subjects:
-
-### There are classes for all the tables we need to access to
-Specifically, for `Subjects` - where we will insert the actual subject ids - and for `Projects`. The latter is necessary because in the `Subjects` table we have a `projectidx`, however to know what is the `projectidx` of our projects - where we want to register new subjects - we need to look into the `Projects` table.
-
-
-### Subjects can also be deleted from here
-Look in the last cell
-
-
-
-
-
-
-
-
-
-
+NB: in the notebook there are also examples showing how to _remove_ subjects. Check the last cells.
 
 
 
