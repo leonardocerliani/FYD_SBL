@@ -1,0 +1,5 @@
+.DS_Store
+.ipynb_checkpoints/
+.env
+dj_local_conf.json
+venv_FYD/
