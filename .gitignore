@@ -3,3 +3,5 @@
 .env
 dj_local_conf.json
 venv_FYD/
+FYD_completed_tasks/
+

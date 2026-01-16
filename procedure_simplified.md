@@ -42,6 +42,11 @@ pip install -r requirements.txt
 ```
 
 ## 5. Generate the json files
+
+| **NB: for the following steps you should modify the content of the jupyter notebook according to you specific project name/id as well as the values of the required fields in the json file according to your specific experiment**
+
+| **The values in the provided jupyter notebooks are just an example**
+
 Launch `jupyter lab` (make sure you are inside the `vnv_FYD` environment) and open the `01_generate_json.ipynb`
 
 Fill in the template with the parameters of your study that you got from the web interface. For instance:
@@ -88,7 +93,7 @@ done
 
 
 ## 6. Update the FYD database
-Open the `02_register)subj_on_FYD.ipynb`. This will allow you to register the subjects for which you created the json - together with all the info contained in them - in the db (database) of FYD.
+Open the `02_register_subj_on_FYD.ipynb`. This will allow you to register the subjects for which you created the json - together with all the info contained in them - in the db (database) of FYD.
 
 **NB**: You might need to do some modifications. Notably, you need to have the appropriate uname and pw to access the database. These two should be stored in an `.env` file. 
 
