@@ -43,9 +43,9 @@ pip install -r requirements.txt
 
 ## 5. Generate the json files
 
-| **NB: for the following steps you should modify the content of the jupyter notebook according to you specific project name/id as well as the values of the required fields in the json file according to your specific experiment**
+**NB: for the following steps you should modify the content of the jupyter notebook according to you specific project name/id as well as the values of the required fields in the json file according to your specific experiment**
 
-| **The values in the provided jupyter notebooks are just an example**
+**The values in the provided jupyter notebooks are just an example**
 
 Launch `jupyter lab` (make sure you are inside the `vnv_FYD` environment) and open the `01_generate_json.ipynb`
 
