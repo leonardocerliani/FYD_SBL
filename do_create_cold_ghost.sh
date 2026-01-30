@@ -47,7 +47,7 @@ mkdir -p "$COLD_DIR"
 
 tree -a "$SRC_DIR" > "${COLD_DIR}/tree.txt"
 
-# --- copy only JSON files ----------------------------------------------------
+# --- copy only *_session.json files ----------------------------------------------------
 
 while IFS= read -r json_file
 do
@@ -59,18 +59,28 @@ do
 
   mkdir -p "$dest_dir"
   cp "$json_file" "$dest_dir/"
-done < <(find "$SRC_DIR" -type f -name "*.json")
+done < <(find "$SRC_DIR" -type f -name "*_session.json")
 
-echo "COLD directory created at:"
-echo "  $COLD_DIR"
 
 
 # --- create data structure for FYD and create/copy the readme --------------------
 mkdir -p \
   "$COLD_DIR/Data_analysis" \
   "$COLD_DIR/Data_collection" \
-  "$COLD_DIR/Ethics" \
-  "$COLD_DIR/Methods_and_materials" \
-  "$COLD_DIR/Publications"
+  "$COLD_DIR/Methods_and_materials"
 
+# Copy Ethics and Publications content from source (if they exist)
+if [ -d "$SRC_DIR/Ethics" ]; then
+  cp -a "$SRC_DIR/Ethics" "$COLD_DIR/"
+else
+  mkdir -p "$COLD_DIR/Ethics"
+fi
+
+if [ -d "$SRC_DIR/Publications" ]; then
+  cp -a "$SRC_DIR/Publications" "$COLD_DIR/"
+else
+  mkdir -p "$COLD_DIR/Publications"
+fi
+
+# Copy top-level README files
 find "$SRC_DIR" -maxdepth 1 -type f -iname "readme.*" -exec cp {} "$COLD_DIR/" \;
