@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# cold_tree.sh
+# do_create_cold_ghost.sh
 #
 # Creates a COLD copy of a directory containing:
 #   - a full text snapshot of the directory tree (tree.txt)
@@ -11,10 +11,10 @@
 #   /path/to/data      → /path/to/data_COLD
 #
 # Usage:
-#   ./cold_tree.sh <directory>
+#   ./do_create_cold_ghost.sh <directory>
 #
 # Example:
-#   ./cold_tree.sh /data01/layerfMRI
+#   ./do_create_cold_ghost.sh /data01/layerfMRI
 #
 
 set -e
